@@ -1,0 +1,6 @@
+tensorflow
+gpt_2_simple
+numpy
+clean-text[gpl]
+language_tool_python
+greads>=0.6

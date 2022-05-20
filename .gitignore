@@ -161,6 +161,6 @@ cython_debug/
 
 # Other
 .DS_Store
-*.txt
+processed_quotes.txt
 *.json
 checkpoint/
