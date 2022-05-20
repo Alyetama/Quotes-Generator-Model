@@ -7,7 +7,7 @@ Create a model that generate quotes of any popular author with two lines of code
 
 Use the Colab notebook:
 
-![[Open in Colab](https://colab.research.google.com/gist/Alyetama/51e07efbe3fc3cfdbf65523734ea9b2d/quotes-generator-model.ipynb](https://colab.research.google.com/assets/colab-badge.svg)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/Alyetama/51e07efbe3fc3cfdbf65523734ea9b2d/quotes-generator-model.ipynb)
 
 
 ---
