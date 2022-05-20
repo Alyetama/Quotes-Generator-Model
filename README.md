@@ -5,17 +5,10 @@ Create a model that generate quotes of any popular author with two lines of code
 
 ## TL;DR
 
-```sh
-git clone https://github.com/Alyetama/Quotes-Generator-Model.git && \
-    cd Quotes-Generator-Model && \
-    pip install -r requirements.txt
-```
+Use the Colab notebook:
 
-```python
-import quotes_generator_model as qgm
+![[Open in Colab](https://colab.research.google.com/gist/Alyetama/51e07efbe3fc3cfdbf65523734ea9b2d/quotes-generator-model.ipynb](https://colab.research.google.com/assets/colab-badge.svg)
 
-qgm.train_pipeline('Oscar Wilde')
-```
 
 ---
 
@@ -36,14 +29,14 @@ pip install -r requirements.txt
 
 import quotes_generator_model as qgm
 
-download_model(model_name='124M')
+qgm.download_model(model_name='124M')
 
 author_name = 'Oscar Wilde'
 
-quotes = qdm.get_author_quotes(author_name)
-preprocess_data(quotes, author_name)
+quotes = qgm.get_author_quotes(author_name)
+qgm.preprocess_data(quotes, author_name)
 
-train(model_name='124M',
+qgm.train(model_name='124M',
           steps=3000,
           restore_from='fresh',
           run_name='run0',
@@ -64,10 +57,10 @@ qgm.train_pipeline('Oscar Wilde')
 ```python
 import quotes_generator_model as qgm
 
-results = generate(checkpoint_folder_path='checkpoint/run0', nsamples=10)
+results = qgm.generate(checkpoint_folder_path='checkpoint/run0', nsamples=10)
 
 
 # Optional: to clean the generated results (remove prefix, grammar checks, etc.):
 
-clean_results = clean_generated(results)
+clean_results = qgm.clean_generated(results)
 ```

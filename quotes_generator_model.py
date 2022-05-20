@@ -2,7 +2,6 @@
 # coding: utf-8
 
 import json
-import time
 from pathlib import Path
 
 import gpt_2_simple as gpt2
@@ -38,12 +37,12 @@ def preprocess_data(quotes,
     if isinstance(quotes, str):
         if Path(quotes).exists():
             with open(quotes) as j:
-                quotes_list = json.load(j)
+                quotes = json.load(j)
     else:
         assert isinstance(quotes, list)
 
     with open(output_file, 'w') as f:
-        for q in quotes_list:
+        for q in quotes:
             f.write(f"_TOPIC_ {topic} _QUOTE_ {q} _AUTHOR_ {author} _END_\n")
 
     encoded = gpt2.encode_dataset(output_file)
